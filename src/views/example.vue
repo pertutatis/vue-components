@@ -1,54 +1,26 @@
 <template>
     <div class="form">
-        <div class="form--group">
-            <label>
-                <span>Contraseña</span>
-                <input v-model="pass" :type="type">
-            </label>
-            <button @click="toggleVisibility">toggle</button>
-        </div>
-
-        <div class="form--group">
-            <label>
-                <span>Repita contraseña</span>
-                <input v-model="rePass" :type="type">
-            </label>
-            <button @click="toggleVisibility">toggle</button>
-        </div>
-
-        <div class="form--group">
-            <label>
-                <span>Nueva Contraseña</span>
-                <input v-model="newPass" :type="type">
-            </label>
-            <button @click="toggleVisibility">toggle</button>
-        </div>
+        <inputcustom v-model="pass">Contraseña</inputcustom>
+        <inputcustom v-model="rePass">Repita Contraseña</inputcustom>
+        <inputcustom v-model="newPass">Nueva Contraseña</inputcustom>
     </div>
 </template>
 
 <script>
+import inputcustom from '@/components/input.vue';
 
 export default {
     name: 'Home',
+    components: {
+        inputcustom
+    },
 
     data() {
         return {
-            type: 'password',
             pass: '',
             rePass: '',
             newPass: ''
         };
-    },
-
-    methods: {
-        toggleVisibility() {
-            const toggle = {
-                password: 'text',
-                text: 'password'
-            };
-
-            this.type = toggle[this.type];
-        }
     }
 };
 </script>

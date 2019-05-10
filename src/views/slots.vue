@@ -1,6 +1,14 @@
 <template>
     <div>
-        <like-slots />
+        <like-slots>
+            <template v-slot="{likes}">
+            {{likes}} patatas
+            </template>
+
+            <template #pretext>
+                tienes 
+            </template>
+        </like-slots>
     </div>
 </template>
 

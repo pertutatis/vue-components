@@ -2,7 +2,7 @@
     <div>
         <h1>You have {{ likes }} likes</h1>
         <like :counter-start="likesInit" @updateLikes="updateLikes">
-            Custom like
+            importante
         </like>
 
         <div class="description">

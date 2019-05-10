@@ -39,7 +39,6 @@
 
 .description {
     margin-top: 150px;
-
 }
 
 .description a {
